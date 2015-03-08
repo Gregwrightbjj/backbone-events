@@ -32,7 +32,7 @@ EventDispatcher.listenTo(EventDispatcher, "addition", function(){dataObject.coun
 /* TODO */
 
 EventDispatcher.listenTo(EventDispatcher, "flick", function(){
-  !dataObject.switch
+  dataObject.switch = !dataObject.switch
 })
 /* ---------
   Write code that listens to the "siren" event on the EventDispatcher
@@ -41,7 +41,7 @@ EventDispatcher.listenTo(EventDispatcher, "flick", function(){
 
 /* TODO */
 EventDispatcher.listenTo(EventDispatcher, "siren", function(){
-  dataObject.amplify
+  dataObject.amplify()
 })
 
 /* ---------
@@ -52,6 +52,6 @@ EventDispatcher.listenTo(EventDispatcher, "siren", function(){
 
 /* TODO */
 EventDispatcher.listenTo(EventDispatcher, "change-amplify", function(hello){
-  dataObject.amplify === hello
+  dataObject.amplify = hello
 })
 
